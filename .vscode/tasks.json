@@ -2,37 +2,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile and run",
+            "label": "Compile and Run C++",
             "type": "shell",
-            "command": "g++",
+            "command": "cmd",
             "args": [
-                "-std=c++17",
-                "-o",
-                "${fileBasenameNoExtension}.exe",
-                "${file}"
+                "/c",
+                "del C:\\a2z\\sort.exe >nul 2>&1 && C:\\MinGW\\bin\\g++.exe -std=c++17 -g C:\\a2z\\sort.cpp -o C:\\a2z\\sort.exe && C:\\a2z\\sort.exe"
             ],
-            "options": {
-                "shell": {
-                    "executable": "C:\\Windows\\System32\\cmd.exe"
-                }
-            },
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": [],
-            "dependsOn": [],
-            "detail": "Compile and run C++ file"
-        },
-        {
-            "label": "run",
-            "type": "shell",
-            "command": ".\\${fileBasenameNoExtension}.exe < input.txt > output.txt",
-            "options": {
-                "shell": {
-                    "executable": "C:\\Windows\\System32\\cmd.exe"
-                }
-            }
+            "detail": "Compiles and runs C++ code using g++"
         }
     ]
 }
+
